@@ -118,4 +118,3 @@ def upload_image():
 
     else:
         return jsonify({'error': 'Invalid file format'}), 400
-
