@@ -92,8 +92,6 @@ def four_point_transform(image, pts):
 
     return warped
 
-
-@app.route('/upload', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
