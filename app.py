@@ -10,7 +10,7 @@ from scipy.spatial import distance as dist
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
-@app.route('/', methods=['POST'])
+
 # ml code for croping
 
 def crop_paper(image):
@@ -92,6 +92,7 @@ def four_point_transform(image, pts):
 
     return warped
 
+@app.route('/', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
