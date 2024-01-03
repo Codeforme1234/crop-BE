@@ -117,4 +117,5 @@ def upload_image():
         return send_file(io_buf, mimetype='image/jpeg')
 
     else:
-        return jsonify({'error': 'Invalid file format'}), 400
+        return jsonify({'error': 'Invalid file format'}),
+
